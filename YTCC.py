@@ -18,8 +18,6 @@ from subbtn import subbtnimage  # sub button image
 from srtbtn import srtbtnimage  # srt button image
 
 # timestamp calculate
-
-
 def outputsub():
     link = en.get()
     arr = link.split('/')
@@ -40,8 +38,6 @@ def outputsub():
                           ": " + str(item['text']) + "\n")
 
 # just sec 2 time
-
-
 def sec2time(sec, n_msec=3):
     ''' Convert seconds to 'D days, HH:MM:SS.FFF' '''
     if hasattr(sec, '__len__'):
@@ -58,16 +54,12 @@ def sec2time(sec, n_msec=3):
     return ('%d days, ' + pattern) % (d, h, m, s)
 
 # so that I can fking get the next element of the list
-
-
 def previous_and_next(some_iterable):
     items, nexts = tee(some_iterable, 2)
     nexts = chain(islice(nexts, 1, None), [None])
     return zip(items, nexts)
 
 # srt file output
-
-
 def outputsrt():
     link = en.get()
     arr = link.split('/')
